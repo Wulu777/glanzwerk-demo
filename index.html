@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Glanzwerk – Demo für professionelle Fahrzeugaufbereitung">
+<title>Glanzwerk | Premium Fahrzeugpflege</title>
+<style>
+:root {
+  --bg:#0a0d11;
+  --surface:#141a21;
+  --gold:#dfb66c;
+  --muted:#aeb7c2;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:var(--bg);
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+}
+a { color:inherit; text-decoration:none; }
+header {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#0c1118f2;
+  border-bottom:1px solid #ffffff15;
+  padding:20px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo {
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+.gold { color:var(--gold); }
+nav { display:flex; gap:25px; align-items:center; }
+nav a:hover { color:var(--gold); }
+.btn {
+  display:inline-block;
+  padding:15px 24px;
+  background:var(--gold);
+  color:#101010;
+  font-weight:bold;
+  border-radius:7px;
+  transition:.2s;
+}
+.btn:hover {
+  background:#f2ca85;
+  transform:translateY(-2px);
+}
+.hero {
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  padding:90px 8%;
+  background:
+    linear-gradient(90deg,#080b10 8%,#080b10bb 52%,#080b1044),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1800")
+    center/cover;
+}
+.hero-content { max-width:700px; }
+.eyebrow {
+  color:var(--gold);
+  letter-spacing:3px;
+  font-size:13px;
+  font-weight:bold;
+}
+h1 {
+  font-size:clamp(46px,7vw,86px);
+  line-height:1.05;
+  margin:22px 0;
+}
+.hero p {
+  color:#e0e5eb;
+  max-width:530px;
+  font-size:18px;
+  line-height:1.8;
+}
+section { padding:95px 8%; }
+h2 {
+  font-size:clamp(30px,4vw,46px);
+  margin:15px 0 35px;
+}
+.intro {
+  color:var(--muted);
+  max-width:650px;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+.card {
+  background:var(--surface);
+  border:1px solid #ffffff14;
+  border-radius:14px;
+  overflow:hidden;
+  transition:.25s;
+}
+.card:hover {
+  transform:translateY(-5px);
+  border-color:#dfb66c66;
+}
+.card img {
+  width:100%;
+  height:225px;
+  object-fit:cover;
+}
+.card-body { padding:25px; }
+.card h3 { font-size:23px; }
+.card p {
+  color:var(--muted);
+  line-height:1.7;
+}
+.price {
+  display:block;
+  color:var(--gold);
+  font-size:21px;
+  font-weight:bold;
+  margin-top:18px;
+}
+.about {
+  background:#111820;
+}
+.features {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+.feature {
+  padding:28px;
+  border:1px solid #ffffff1a;
+  border-radius:12px;
+}
+.feature strong {
+  color:var(--gold);
+  font-size:26px;
+}
+.feature p {
+  color:var(--muted);
+  line-height:1.7;
+}
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.gallery img {
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:12px;
+}
+.contact {
+  text-align:center;
+  background:linear-gradient(135deg,#1a222d,#10151c);
+}
+.contact p {
+  color:var(--muted);
+  margin-bottom:30px;
+}
+footer {
+  padding:30px 8%;
+  text-align:center;
+  color:var(--muted);
+  border-top:1px solid #ffffff15;
+}
+.demo-note {
+  padding:12px 20px;
+  background:#dfb66c;
+  color:#151515;
+  text-align:center;
+  font-size:13px;
+  font-weight:bold;
+}
+@media(max-width:800px) {
+  header { flex-wrap:wrap; }
+  nav { gap:12px; flex-wrap:wrap; font-size:13px; }
+  .hero { min-height:530px; }
+  .cards,.features,.gallery {
+    grid-template-columns:1fr;
+  }
+  section { padding:65px 6%; }
+  .gallery img { height:230px; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-note">
+  DEMO-PROJEKT – Fiktiver Betrieb und Beispielpreise
+</div>
+
+<header>
+  <a class="logo" href="#">
+    GLANZ<span class="gold">WERK</span>
+  </a>
+  <nav>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#ueberuns">Über uns</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">PREMIUM FAHRZEUGPFLEGE</div>
+      <h1>Perfektion<br>bis ins <span class="gold">Detail.</span></h1>
+      <p>
+        Dein Fahrzeug verdient mehr als eine gewöhnliche Wäsche.
+        Entdecke professionelle Fahrzeugpflege mit höchsten
+        Ansprüchen an Qualität und Präzision.
+      </p>
+      <a class="btn" href="#leistungen">Leistungen entdecken</a>
+    </div>
+  </div>
+
+  <section id="leistungen">
+    <div class="eyebrow">UNSERE LEISTUNGEN</div>
+    <h2>Pflege auf höchstem Niveau</h2>
+    <p class="intro">
+      Von der gründlichen Innenreinigung bis zur umfassenden
+      Fahrzeugaufbereitung – individuell abgestimmte Pflege.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800" alt="Innenreinigung">
+        <div class="card-body">
+          <h3>Innenreinigung</h3>
+          <p>Reinigung von Sitzen, Teppichen, Cockpit und Innenraum.</p>
+          <span class="price">ab 79 €*</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800" alt="Außenpflege">
+        <div class="card-body">
+          <h3>Außenpflege</h3>
+          <p>Schonende Handwäsche, Felgenreinigung und Lackpflege.</p>
+          <span class="price">ab 59 €*</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800" alt="Komplettaufbereitung">
+        <div class="card-body">
+          <h3>Komplettaufbereitung</h3>
+          <p>Umfassende Pflege für ein hochwertiges Gesamtbild.</p>
+          <span class="price">ab 179 €*</span>
+        </div>
+      </article>
+    </div>
+    <p class="intro" style="font-size:12px;margin-top:20px">
+      * Beispielpreise für dieses fiktive Demo-Projekt.
+    </p>
+  </section>
+
+  <section class="about" id="ueberuns">
+    <div class="eyebrow">WARUM GLANZWERK?</div>
+    <h2>Qualität, die man sieht.</h2>
+    <div class="features">
+      <div class="feature">
+        <strong>01</strong>
+        <h3>Liebe zum Detail</h3>
+        <p>Sorgfältige Pflege mit Blick auf jede Oberfläche.</p>
+      </div>
+      <div class="feature">
+        <strong>02</strong>
+        <h3>Individuelle Pflege</h3>
+        <p>Leistungen passend zu Fahrzeug und Zustand.</p>
+      </div>
+      <div class="feature">
+        <strong>03</strong>
+        <h3>Klare Kommunikation</h3>
+        <p>Transparente Angebote und verständliche Abläufe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerie">
+    <div class="eyebrow">EINBLICKE</div>
+    <h2>Fahrzeugpflege in Bildern</h2>
+    <p class="intro">
+      Beispielbilder zur Veranschaulichung des Website-Designs.
+      Keine echten Kundenarbeiten.
+    </p>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700" alt="Fahrzeug Beispielbild">
+      <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=700" alt="Autowäsche Beispielbild">
+      <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=700" alt="Fahrzeugpflege Beispielbild">
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="eyebrow">KONTAKT</div>
+    <h2>Bereit für neuen Glanz?</h2>
+    <p>
+      Hier erscheint später die echte Kontaktmöglichkeit
+      des jeweiligen Unternehmens.
+    </p>
+    <a class="btn" href="#leistungen">Unsere Leistungen ansehen</a>
+  </section>
+</main>
+
+<footer>
+  © 2026 Glanzwerk – Fiktive Demo-Website.
+  Keine echten Dienstleistungen oder Buchungen.
+</footer>
+
+</body>
+</html>
